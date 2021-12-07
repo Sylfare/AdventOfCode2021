@@ -6,5 +6,5 @@ export const openFile = (name,separator="\n")=>{
 
 export const openFileNumber = (name,separator="\n")=>{
     return openFile(name,separator)
-    .then(file=>file.map(n=>parseInt(n.trim())));
+    .then(file=>file.map(n=>parseInt(n.trim(), 10)));
 }
