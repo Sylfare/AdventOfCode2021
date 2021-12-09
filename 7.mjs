@@ -1,5 +1,6 @@
 import { openFileNumber } from './lib.mjs';
 
+const t0 = performance.now();
 let list = await openFileNumber('./input7.txt',",");
 
 const sumNumb = n => ((n-1)*n)/2;
@@ -39,3 +40,6 @@ function findLeast(list, proportional){
 console.log(findLeast(list, false));
 console.log(findLeast(list, true));
 
+const t1 = performance.now();
+
+console.log(`Took ${t1 - t0} ms`)
