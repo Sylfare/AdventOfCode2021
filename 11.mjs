@@ -1,4 +1,6 @@
-import { openFile } from './lib.mjs';
+import { openFile, Performance } from './lib.mjs';
+
+const p = new Performance();
 
 function validCells(i){
     const y = Math.trunc(i/width);
@@ -94,5 +96,4 @@ for (let i = 1; i <= 100 || !part2Found; i++) {
     }
 }
 
-
-
+p.end();
